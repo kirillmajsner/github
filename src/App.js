@@ -1,18 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
 
-function App() {
+import Toolbar from "./components/UI/Toolbar/Navigation";
+import Routes from "./Routes";
+import Container from "@material-ui/core/Container";
+
+export default function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Hello Rebyata
-                </p>
+        <Fragment>
+            <header>
+                <Toolbar/>
             </header>
-        </div>
+            <Container>
+                <Routes/>
+            </Container>
+        </Fragment>
     );
 }
 
-export default App;
